@@ -14,7 +14,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use('/api', routes);
 
-app.listen(config.port, () => {
+app.listen(process.env.PORT || config.port, () => {
   log.info(`Express HTTP server listening on port ${config.port}`);
   log.debug(`Express HTTP server listening on port ${config.port}`);
 });

@@ -1,0 +1,7 @@
+{
+    "env": "dev",
+    "port": "3000",
+    "httpsPort": "3001",
+    "enableHttp": true
+  }
+  

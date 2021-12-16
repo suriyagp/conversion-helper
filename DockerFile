@@ -1,0 +1,15 @@
+# Specify a base image
+FROM node:12.22.0-alpine AS alpine
+
+RUN mkdir -p /app
+
+WORKDIR /app
+
+COPY ./ ./
+
+RUN yarn install
+
+# RUN npm run build-development
+
+# Default command
+CMD ["yarn", "start"]
